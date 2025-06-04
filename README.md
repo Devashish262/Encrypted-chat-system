@@ -80,6 +80,32 @@ npm start
 
 3. Open your browser and navigate to `http://localhost:3000`
 
+## Docker Deployment
+
+1. Copy `server/.env.example` to `server/.env` and adjust values if needed.
+2. Run `docker-compose up --build`.
+3. Visit `http://localhost:3000` in your browser.
+
+## Vercel Deployment
+
+1. Install the [Vercel CLI](https://vercel.com/docs/cli) globally:
+   ```
+   npm install -g vercel
+   ```
+2. Build the client application:
+   ```
+   cd client
+   npm install
+   npm run build
+   cd ..
+   ```
+3. Deploy both the server API and the static client by running:
+   ```
+   vercel --prod
+   ```
+4. Configure the environment variables in the Vercel dashboard using the keys from `server/.env.example`.
+
+
 ## Usage
 
 1. Register a new account or login with existing credentials
